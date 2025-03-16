@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번호 뽑기</title>
+    <style>
+       @font-face {
+          font-family: 'KCC-DodamdodamR';
+          src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-DodamdodamR.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+      }
+      * {
+        font-family: 'KCC-DodamdodamR';
+        text-align: center;
+      }
+      small {
+        font-size: 15px;
+      }
+      input[type = number].seBum{
+        width: 15vw;
+        height: 4vw;
+
+        border-radius: 2.5vw;
+
+        font-size: 3vw;
+        text-align: center;
+      }
+      #startNum:hover{
+        transform: scale(2.5);
+        transition: 0.5s;
+        animation-name: seBumAni;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      #endNum:hover{
+        transform: scale(2.5);
+        transition: 0.5s;
+        animation-name: seBumAni;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+      @keyframes seBumAni {
+        0% {
+          background-color: red;
+        }
+        15% {
+          background-color: orange;
+        }
+        30% {
+          background-color: yellow;
+        }
+        45% {
+          background-color: green;
+        }
+        60% {
+          background-color: blue;
+        }
+        75% {
+          background-color: purple;
+        }
+        90% {
+          background-color: pink;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+      #text-1{
+        font-size: 4vw;
+      }
+
+      #text-2{
+        font-size: 2vw;
+      }
+      #draw {
+        width: 75vw;
+        height: 10vh;
+        box-shadow: 1vh 1vh #7e5e19;
+        font-size: 2.5em;
+
+        background-color: #f2ae1d;
+        border: none;
+        border-radius: 5vh;
+      }
+      #draw:active{
+        width: 75vw;
+        height: 10vh;
+
+        transform: translate(1vh, 1vh);
+        box-shadow: none;
+      }
+      .zoomDiv:hover{
+        transform: scale(2.5);
+        transition: 0.5s;
+      }
+      .ddong:hover{
+        transform: scale(2.5);
+        transition: 0.5s;
+      }
+      #noneSettingchang:hover{
+        transform: scale(2.5);
+        transition: 0.5s;
+      }
+      #drawNumView {
+        width: 70vw;
+        height: 30vh;
+        text-align: center;
+        border-radius: 15vh;
+        margin: 0 auto;
+        font-size: 10em;
+        line-height: 30vh;
+        border: #000000 5px solid;
+      }
+      body {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+      }
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      #main{
+        text-align: center;
+      }
+      .binginb:hover {
+        transform: rotate(2880deg);
+        transition-duration: 2.5s;
+        transition-timing-function: ease-in-out;
+      }
+    </style>
+    <link rel="stylesheet" href="paticle_1.css">
+
+  </head>
+  <body>
+    <div id="main">
+      <div id="drawNumView" class="binginb">
+        <div>
+          <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div> <div class="particle papapa"></div>
+        </div>
+        <div>
+          🎉
+          <span id="mainNum">24</span>
+          🎉
+        </div>
+      </div>
+      <button id="draw">뽑기 시작</button>
+      <br><br><br>
+      <div id="noneSettingchang">
+        <input type="checkbox" id="noneSettingchangin"> 설정창 숨기기
+      </div>
+      <div id="drawSetting">
+        <span id="text-1">범위 지정</span><br>
+        <input type="number" id="startNum" min="1" max="100" value="1" class="seBum">
+        <span id="text-2">~</span>
+        <input type="number" id="endNum" min="1" max="100" value="24" class="seBum">
+        <hr>
+        
+        <span id="text-1">제외 번호 지정</span><br>
+        <div class="ddong">
+          <input type="checkbox" id="drawedAutoSave" checked> 뽑은 번호 자동저장
+        </div>
+        <br>
+        <div>
+          <div class="noNumAdd">
+            <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="1" style="font-size: 2vw; height: 10%; width: 12vw; border-radius: 0px; border: none; background-color: #f2ae1d;"><button style="font-size: 2vw; height: 100%; width: 4vw; background-color: green; border-radius: 0px; border: none;">+</button><button style="font-size: 2vw; height: 100%; width: 4vw; background-color: red; border-radius: 0px; border: none;">-</button></div>
+            <template>
+              <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="0" style="font-size: 2vw; height: 100%vw; width: 3%; border-radius: 0px; border: none; background-color: #f2ae1d;"><button style="font-size: 2vw; height: 100%; width: 3%; background-color: green; border-radius: 0px; border: none;">+</button><button style="font-size: 2vw; height: 100%; width: 3%; background-color: red; border-radius: 0px; border: none;">-</button></div>
+            </template>
+          </div>
+        </div>
+        <hr>
+        <span id="text-1">기타 설정</span><br>
+        <div class="zoomDiv">
+          <input type="checkbox" checked> 애니매이션 켜기
+        </div>
+        <hr>
+      </div>
+    </div>
+    <h1>
+      Copyright 2025. 김민찬 All rights reserved.
+    </h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <small>
+      폰트 출처:
+      KCC도담도담체<br>
+      <a href="https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202210270000000000147">https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202210270000000000147</a>
+    </small>
+    <script>
+      
+    </script>
+  </body>
+</html>
