@@ -160,23 +160,23 @@
         <input type="number" id="endNum" min="1" max="100" value="24" class="seBum">
         <hr>
         
-        <span id="text-1">제외 번호 지정</span><br>
+        <span id="text-1">제외 번호 지정(브라우저가 종료 되거나 최대 3시간 동안 저장됩니다!)</span><br>
         <div class="ddong">
           <input type="checkbox" id="drawedAutoSave" checked> 뽑은 번호 자동저장
         </div>
         <br>
         <div>
           <div class="noNumAdd">
-            <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="1" style="font-size: 2vw; height: 10%; width: 12vw; border-radius: 0px; border: none; background-color: #f2ae1d;"><button style="font-size: 2vw; height: 100%; width: 4vw; background-color: green; border-radius: 0px; border: none;">+</button><button style="font-size: 2vw; height: 100%; width: 4vw; background-color: red; border-radius: 0px; border: none;">-</button></div>
+            <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="1" style="font-size: 2vw; height: 10%; width: 12vw; border-radius: 0px; border: none; background-color: #f2ae1d;"><button class="jaewhyNumAdd" style="font-size: 2vw; height: 100%; width: 4vw; background-color: green; border-radius: 0px; border: none;">+</button><button class="jaewhyNumRemove" style="font-size: 2vw; height: 100%; width: 4vw; background-color: red; border-radius: 0px; border: none;">-</button></div>
             <template>
-              <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="0" style="font-size: 2vw; height: 100%vw; width: 3%; border-radius: 0px; border: none; background-color: #f2ae1d;"><button style="font-size: 2vw; height: 100%; width: 3%; background-color: green; border-radius: 0px; border: none;">+</button><button style="font-size: 2vw; height: 100%; width: 3%; background-color: red; border-radius: 0px; border: none;">-</button></div>
+              <div><input type="number" min="1" max="24" class="noNumAddIn" data-noNum="0" style="font-size: 2vw; height: 100%vw; width: 3%; border-radius: 0px; border: none; background-color: #f2ae1d;"><button class="jaewhyNumAdd" style="font-size: 2vw; height: 100%; width: 3%; background-color: green; border-radius: 0px; border: none;">+</button><button class="jaewhyNumRemove" style="font-size: 2vw; height: 100%; width: 3%; background-color: red; border-radius: 0px; border: none;">-</button></div>
             </template>
           </div>
         </div>
         <hr>
         <span id="text-1">기타 설정</span><br>
         <div class="zoomDiv">
-          <input type="checkbox" checked> 애니매이션 켜기
+          <input type="checkbox" id="aniOnOff" checked> 애니매이션 켜기
         </div>
         <hr>
       </div>
@@ -191,6 +191,55 @@
       <a href="https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202210270000000000147">https://copyright.keris.or.kr/wft/fntDwnldView?fntGrpId=GFT202210270000000000147</a>
     </small>
     <script>
+      // 만료 시간과 함께 데이터를 저장
+      function setItemWithExpireTime(keyName, keyValue, tts){ 
+         // localStorage에 저장할 객체
+         const obj = {
+          value : keyValue,
+          expire : Date.now() + tts
+        }
+        // 객체를 JSON 문자열로 변환
+        const objString = JSON.stringify(obj); 
+        // setItem
+        window.localStorage.setItem(keyName, objString);
+      }
+      
+      function getItemWithExpireTime(keyName) {
+        // localStorage 값 읽기 (문자열)  
+        const objString = window.localStorage.getItem(keyName);
+        // null 체크
+        if(!objString) {
+          return null;
+        }
+        // 문자열을 객체로 변환
+        const obj = JSON.parse(objString);
+        // 현재 시간과 localStorage의 expire 시간 비교
+        if(Date.now() > obj.expire) {
+          // 만료시간이 지난 item 삭제
+          window.localStorage.removeItem(keyName);
+          // null 리턴    
+          return null;
+        }
+        // 만료기간이 남아있는 경우, value 값 리턴  
+        return obj.value;
+      }
+
+      var noneSettingchangin = document.getElementById("noneSettingchangin");
+      var drawSetting = document.getElementById("drawSetting");
+
+      noneSettingchangin.addEventListener(("click"), () => {
+        if(noneSettingchangin.checked){
+          drawSetting.style.display = "none";
+        } else{
+          drawSetting.style.display = "block";
+        }
+      })
+
+
+
+      var drawStartButton = document.getElementById("draw");
+      
+      var 
       
     </script>
   </body>
