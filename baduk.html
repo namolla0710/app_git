@@ -745,10 +745,21 @@
           var locR = String(e.dataset.locr);
           
           jungCheckList = [locC, locR]
+
+          if(jung(jungBukCheck, jungCheckList)){
+            ddong.disabled = true;
+            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
+          } else if(!jung(jungBukCheck, jungCheckList)){
+            ddong.disabled = false;
+            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
+          } else{
+            console.log("예외")
+          }
+          
           console.log(e, e.style.backgroundImage)
           e.classList.add("target");
           cancolor.forEach((ele) => {
-            if(ele.className.includes('target')){
+            if(ele.className.includes('target') && !ddong.disabled){
               console.log(ele, ele.className.includes('target'), ele.className)
               ele.classList.remove("target");
               ele.classList.add("ajik");
@@ -760,15 +771,7 @@
           console.log(e, e.className.includes('target'), e.className)
 
 
-          if(jung(jungBukCheck, jungCheckList)){
-            ddong.disabled = true;
-            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
-          } else if(!jung(jungBukCheck, jungCheckList)){
-            ddong.disabled = false;
-            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
-          } else{
-            console.log("예외")
-          }
+          
           var locC = String(e.dataset.locc);
           var locR = String(e.dataset.locr);
           nowLoc.innerText = locC + locR;
