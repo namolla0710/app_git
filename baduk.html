@@ -14,10 +14,44 @@
         background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("./img/black.png");
       }
-      .target {
+      
+      .target:not(.top, .left, .bottom, .right, .t_r, .t_l, .b_r, .b_l){
         background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
-        background-image: url("./img/target.png");
+        background-image: url("img/target.png");
       }
+      .top.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_t.png");
+      }
+      .left.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_l.png");
+      }
+      .bottom.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_b.png");
+      }
+      .right.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_r.png");
+      }
+      .t_r.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_t_r.png");
+      }
+      .t_l.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_t_l.png");
+      }
+      .b_r.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_b_r.png");
+      }
+      .b_l.target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("img/target_b_l.png");
+      }
+
       .badukpancan1 {
         width: 3.5vh;
         height: 3.5vh;
@@ -668,7 +702,7 @@
 
       ddong.onclick = function(){
         jungBukCheck.push(jungCheckList)
-
+        document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.remove("target");
         if(turn_name == 0){
           b_d_s++;
           turn_name = 1;
@@ -713,7 +747,6 @@
             }
           })
           e.classList.remove("ajik");
-
           e.classList.add("target");
           console.log(e, e.className.includes('target'), e.className)
 
