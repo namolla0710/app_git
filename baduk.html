@@ -87,6 +87,7 @@
         border-left: 0.5vh black solid;
         background-image: url("img/b_l.png");
       }
+      
       td {
         text-align: center;
       }
@@ -100,7 +101,8 @@
         font-family: 'NoonnuBasicGothicRegular';
       }
       #log {
-        height: 15vh;
+        width: 60vh;
+        height: 63.5vh;
       }
       input {
         width: 15vh;
@@ -599,9 +601,6 @@
               자리에 돌을 놓기
             </button>
             <div>
-              <input type="number" id="b" value="0" min="0">
-            </div>
-            <div>
               <h1><span id="trun">흑</span>돌 턴입니다!</h1>
               <p>
                 흑돌이 놓은 돌의 수: <span id="hj">0</span>
@@ -610,6 +609,8 @@
               </p>
             </div>
             <div>
+              <input type="number" id="b" value="0" min="0">
+          
               <input type="number" id="w" value="0" min="0">
             </div>
           </div>
@@ -657,6 +658,7 @@
           wj.innerText = w_d_s;
 
           document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.add("blackdol");
+          document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.remove("ajik");
           
           trun.innerText = "백";
         } else if(turn_name == 1){
@@ -667,6 +669,7 @@
           wj.innerText = w_d_s;
 
           document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.add("whitedol");
+          document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.remove("ajik");
 
           trun.innerText = "흑";
         }
