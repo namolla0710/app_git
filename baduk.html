@@ -7,12 +7,16 @@
 
     <style>
       .whitedol {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("./img/white.png");
       }
       .blackdol {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("./img/black.png");
+      }
+      .target {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
+        background-image: url("./img/target.png");
       }
       .badukpancan1 {
         width: 3.5vh;
@@ -31,63 +35,81 @@
         background-color: #d7a870;
       }
       .canNum {
-        color:rgb(58, 58, 58)
+        color: rgb(58, 58, 58);
       }
       table {
         border-spacing: 0px;
       }
       .cancolor.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/add.png");
       }
       .point.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/add_point.png");
       }
       .top.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-top: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/t.png");
       }
       .left.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-left: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/l.png");
       }
       .bottom.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-bottom: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/b.png");
       }
       .right.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-right: 0.5vh  black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/r.png");
       }
       .t_r.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-top: 0.5vh black solid;
-        border-right: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/t_r.png");
       }
       .t_l.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-top: 0.5vh black solid;
-        border-left: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/t_l.png");
       }
       .b_r.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-bottom: 0.5vh black solid;
-        border-right: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/b_r.png");
       }
       .b_l.ajik {
-        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
-        border-bottom: 0.5vh black solid;
-        border-left: 0.5vh black solid;
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/b_l.png");
       }
       
+      .top {
+        border-top: 0.5vh black solid;
+      }
+      .left {
+        border-left: 0.5vh black solid;
+      }
+      .bottom {
+        border-bottom: 0.5vh black solid;
+      }
+      .right {
+        border-right: 0.5vh  black solid;
+      }
+      .t_r {
+        border-top: 0.5vh black solid;
+        border-right: 0.5vh black solid;
+      }
+      .t_l {
+        border-top: 0.5vh black solid;
+        border-left: 0.5vh black solid;
+      }
+      .b_r {
+        border-bottom: 0.5vh black solid;
+        border-right: 0.5vh black solid;
+      }
+      .b_l {
+        border-bottom: 0.5vh black solid;
+        border-left: 0.5vh black solid;
+      }
+
       td {
         text-align: center;
       }
@@ -621,10 +643,7 @@
       function jung(arr, jungCheckArr){
         var ddongnemsae = false;
         arr.forEach((e) => {
-          console.log("포 이치 쵁")
-          console.log("중복 쵁", e, jungCheckArr)
           if(e[0] == jungCheckArr[0] && e[1] == jungCheckArr[1]){
-            console.log("중복 쵁", e, jungCheckArr)
             ddongnemsae = true;
           }
         });
@@ -638,7 +657,7 @@
       var hj = document.getElementById("hj");
       var wj = document.getElementById("wj");
 
-      var jungBukCheck = []
+      var jungBukCheck = [];
       
       var turn_name = 0;  // 0이 흑, 1이 백 
 
@@ -684,9 +703,18 @@
           
           jungCheckList = [locC, locR]
           console.log(e, e.style.backgroundImage)
+          e.classList.add("target");
+          cancolor.forEach((ele) => {
+            if(ele.className.includes('target')){
+              console.log(ele, ele.className.includes('target'), ele.className)
+              ele.classList.remove("target");
+              console.log(ele, ele.className.includes('target'), ele.className)
+            }
+          })
+          e.classList.add("target");
+          console.log(e, e.className.includes('target'), e.className)
 
-          e.style.backgroundImage = String(e.style.backgroundImage) + ", " + "url(./img/target.png)";
-          
+
           if(jung(jungBukCheck, jungCheckList)){
             ddong.disabled = true;
             console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
