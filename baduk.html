@@ -757,19 +757,20 @@
           }
           
           console.log(e, e.style.backgroundImage)
-          e.classList.add("target");
-          cancolor.forEach((ele) => {
-            if(ele.className.includes('target') && !ddong.disabled){
-              console.log(ele, ele.className.includes('target'), ele.className)
-              ele.classList.remove("target");
-              ele.classList.add("ajik");
-              console.log(ele, ele.className.includes('target'), ele.className)
-            }
-          })
-          e.classList.remove("ajik");
-          e.classList.add("target");
-          console.log(e, e.className.includes('target'), e.className)
-
+          if(!ddong.disabled){
+            e.classList.add("target");
+            cancolor.forEach((ele) => {
+              if(ele.className.includes('target')){
+                console.log(ele, ele.className.includes('target'), ele.className)
+                ele.classList.remove("target");
+                ele.classList.add("ajik");
+                console.log(ele, ele.className.includes('target'), ele.className)
+              }
+            })
+            e.classList.remove("ajik");
+            e.classList.add("target");
+            console.log(e, e.className.includes('target'), e.className)
+          }
 
           
           var locC = String(e.dataset.locc);
