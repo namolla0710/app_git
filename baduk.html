@@ -661,6 +661,9 @@
           var locR = String(e.dataset.locr);
           
           jungCheckList = [locC, locR]
+          
+          e.style.backgroundImage = e.style.backgroundImage + ", " + "url('./img/target.png')";
+          
           if(jungBukCheck.includes(jungCheckList)){
             ddong.disabled = true;
             return;
