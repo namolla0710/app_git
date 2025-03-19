@@ -6,9 +6,29 @@
     <title>바둑판</title>
 
     <style>
+      .whitedol {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
+        background-image: url("./img/white.png");
+      }
+      .blackdol {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
+        background-image: url("./img/black.png");
+      }
+      .badukpancan1 {
+        width: 3.5vh;
+        height: 3.5vh;
+        
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
       .badukpancan {
         width: 3.5vh;
         height: 3.5vh;
+        
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        
+        background-color: #d7a870;
       }
       .canNum {
         color:rgb(58, 58, 58)
@@ -16,56 +36,53 @@
       table {
         border-spacing: 0px;
       }
-      .cancolor {
-        background-color: #d7a870;
-        background-size: 3.5vh 3.5vh;
+      .cancolor.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         background-image: url("img/add.png");
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
       }
-      .point {
+      .point.ajik {
         background-image: url("img/add_point.png");
       }
-      .top {
-        background-size: 3.5vh 3.5vh;
+      .top.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-top: 0.5vh black solid;
         background-image: url("img/t.png");
       }
-      .left {
-        background-size: 3.5vh 3.5vh;
+      .left.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-left: 0.5vh black solid;
         background-image: url("img/l.png");
       }
-      .bottom {
-        background-size: 3.5vh 3.5vh;
+      .bottom.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-bottom: 0.5vh black solid;
         background-image: url("img/b.png");
       }
-      .right {
-        background-size: 3.5vh 3.5vh;
+      .right.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-right: 0.5vh  black solid;
         background-image: url("img/r.png");
       }
-      .t_r {
-        background-size: 3.5vh 3.5vh;
+      .t_r.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-top: 0.5vh black solid;
         border-right: 0.5vh black solid;
         background-image: url("img/t_r.png");
       }
-      .t_l {
-        background-size: 3.5vh 3.5vh;
+      .t_l.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-top: 0.5vh black solid;
         border-left: 0.5vh black solid;
         background-image: url("img/t_l.png");
       }
-      .b_r {
-        background-size: 3.5vh 3.5vh;
+      .b_r.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-bottom: 0.5vh black solid;
         border-right: 0.5vh black solid;
         background-image: url("img/b_r.png");
       }
-      .b_l {
-        background-size: 3.5vh 3.5vh;
+      .b_l.ajik {
+        background-size: 3.5vh 3.5vh, 3.5vh 3.5vh;
         border-bottom: 0.5vh black solid;
         border-left: 0.5vh black solid;
         background-image: url("img/b_l.png");
@@ -110,464 +127,464 @@
         <td>
           <table>
             <tr>
-              <td class="canNum badukpancan"></td>
+              <td class="canNum badukpancan1"></td>
       
-              <td class="canNum badukpancan">A</td>
-              <td class="canNum badukpancan">B</td>
-              <td class="canNum badukpancan">C</td>
-              <td class="canNum badukpancan">D</td>
-              <td class="canNum badukpancan">E</td>
-              <td class="canNum badukpancan">F</td>
-              <td class="canNum badukpancan">G</td>
-              <td class="canNum badukpancan">H</td>
-              <td class="canNum badukpancan">J</td>
-              <td class="canNum badukpancan">K</td>
-              <td class="canNum badukpancan">L</td>
-              <td class="canNum badukpancan">M</td>
-              <td class="canNum badukpancan">N</td>
-              <td class="canNum badukpancan">O</td>
-              <td class="canNum badukpancan">P</td>
-              <td class="canNum badukpancan">Q</td>
-              <td class="canNum badukpancan">R</td>
-              <td class="canNum badukpancan">S</td>
-              <td class="canNum badukpancan">T</td>
+              <td class="canNum badukpancan1">A</td>
+              <td class="canNum badukpancan1">B</td>
+              <td class="canNum badukpancan1">C</td>
+              <td class="canNum badukpancan1">D</td>
+              <td class="canNum badukpancan1">E</td>
+              <td class="canNum badukpancan1">F</td>
+              <td class="canNum badukpancan1">G</td>
+              <td class="canNum badukpancan1">H</td>
+              <td class="canNum badukpancan1">J</td>
+              <td class="canNum badukpancan1">K</td>
+              <td class="canNum badukpancan1">L</td>
+              <td class="canNum badukpancan1">M</td>
+              <td class="canNum badukpancan1">N</td>
+              <td class="canNum badukpancan1">O</td>
+              <td class="canNum badukpancan1">P</td>
+              <td class="canNum badukpancan1">Q</td>
+              <td class="canNum badukpancan1">R</td>
+              <td class="canNum badukpancan1">S</td>
+              <td class="canNum badukpancan1">T</td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">19</td>
+              <td class="canNum badukpancan1">19</td>
       
-              <td class="badukpancan cancolor t_l" data-locC="19" data-locR="A"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="B"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="C"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="D"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="E"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="F"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="G"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="H"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="J"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="K"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="L"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="M"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="N"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="O"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="P"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="Q"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="R"></td>
-              <td class="badukpancan cancolor top" data-locC="19" data-locR="S"></td>
-              <td class="badukpancan cancolor t_r" data-locC="19" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor t_l" data-locC="19" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor top" data-locC="19" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor t_r" data-locC="19" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">18</td>
+              <td class="canNum badukpancan1">18</td>
       
-              <td class="badukpancan cancolor left" data-locC="18" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="18" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="18" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="18" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="18" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="18" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">17</td>
+              <td class="canNum badukpancan1">17</td>
       
-              <td class="badukpancan cancolor left" data-locC="17" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="17" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="17" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="17" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="17" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="17" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">16</td>
+              <td class="canNum badukpancan1">16</td>
       
-              <td class="badukpancan cancolor left" data-locC="16" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="C"></td>
-              <td class="badukpancan cancolor point" data-locC="16" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="J"></td>
-              <td class="badukpancan cancolor point" data-locC="16" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="P"></td>
-              <td class="badukpancan cancolor point" data-locC="16" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="16" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="16" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="16" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="16" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="16" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="16" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="16" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="16" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">15</td>
+              <td class="canNum badukpancan1">15</td>
       
-              <td class="badukpancan cancolor left" data-locC="15" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="15" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="15" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="15" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="15" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="15" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">14</td>
+              <td class="canNum badukpancan1">14</td>
       
-              <td class="badukpancan cancolor left" data-locC="14" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="14" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="14" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="14" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="14" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="14" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">13</td>
+              <td class="canNum badukpancan1">13</td>
       
-              <td class="badukpancan cancolor left" data-locC="13" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="13" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="13" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="13" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="13" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="13" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">12</td>
+              <td class="canNum badukpancan1">12</td>
       
-              <td class="badukpancan cancolor left" data-locC="12" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="12" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="12" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="12" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="12" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="12" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">11</td>
+              <td class="canNum badukpancan1">11</td>
       
-              <td class="badukpancan cancolor left" data-locC="11" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="11" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="11" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="11" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="11" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="11" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">10</td>
+              <td class="canNum badukpancan1">10</td>
       
-              <td class="badukpancan cancolor left" data-locC="10" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="C"></td>
-              <td class="badukpancan cancolor point" data-locC="10" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="J"></td>
-              <td class="badukpancan cancolor point" data-locC="10" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="P"></td>
-              <td class="badukpancan cancolor point" data-locC="10" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="10" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="10" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="10" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="10" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="10" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="10" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="10" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="10" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">9</td>
+              <td class="canNum badukpancan1">9</td>
       
-              <td class="badukpancan cancolor left" data-locC="9" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="9" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="9" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="9" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="9" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="9" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">8</td>
+              <td class="canNum badukpancan1">8</td>
       
-              <td class="badukpancan cancolor left" data-locC="8" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="8" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="8" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="8" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="8" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="8" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">7</td>
+              <td class="canNum badukpancan1">7</td>
       
-              <td class="badukpancan cancolor left" data-locC="7" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="7" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="7" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="7" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="7" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="7" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">6</td>
+              <td class="canNum badukpancan1">6</td>
       
-              <td class="badukpancan cancolor left" data-locC="6" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="6" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="6" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="6" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="6" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="6" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">5</td>
+              <td class="canNum badukpancan1">5</td>
       
-              <td class="badukpancan cancolor left" data-locC="5" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="5" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="5" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="5" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="5" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="5" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">4</td>
+              <td class="canNum badukpancan1">4</td>
       
-              <td class="badukpancan cancolor left" data-locC="4" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="C"></td>
-              <td class="badukpancan cancolor point" data-locC="4" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="J"></td>
-              <td class="badukpancan cancolor point" data-locC="4" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="P"></td>
-              <td class="badukpancan cancolor point" data-locC="4" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="4" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="4" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="4" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="4" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="4" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor point" data-locC="4" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="4" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="4" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">3</td>
+              <td class="canNum badukpancan1">3</td>
       
-              <td class="badukpancan cancolor left" data-locC="3" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="3" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="3" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="3" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="3" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="3" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">2</td>
+              <td class="canNum badukpancan1">2</td>
       
-              <td class="badukpancan cancolor left" data-locC="2" data-locR="A"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="B"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="C"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="D"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="E"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="F"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="G"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="H"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="J"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="K"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="L"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="M"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="N"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="O"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="P"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="Q"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="R"></td>
-              <td class="badukpancan cancolor" data-locC="2" data-locR="S"></td>
-              <td class="badukpancan cancolor right" data-locC="2" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor left" data-locC="2" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor" data-locC="2" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor right" data-locC="2" data-locR="T"></td>
             </tr>
             <tr>
-              <td class="canNum badukpancan">1</td>
+              <td class="canNum badukpancan1">1</td>
       
-              <td class="badukpancan cancolor b_l" data-locC="1" data-locR="A"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="B"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="C"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="D"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="E"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="F"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="G"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="H"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="J"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="K"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="L"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="M"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="N"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="O"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="P"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="Q"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="R"></td>
-              <td class="badukpancan cancolor bottom" data-locC="1" data-locR="S"></td>
-              <td class="badukpancan cancolor b_r" data-locC="1" data-locR="T"></td>
+              <td class="badukpancan ajik cancolor b_l" data-locC="1" data-locR="A"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="B"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="C"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="D"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="E"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="F"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="G"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="H"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="J"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="K"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="L"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="M"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="N"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="O"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="P"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="Q"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="R"></td>
+              <td class="badukpancan ajik cancolor bottom" data-locC="1" data-locR="S"></td>
+              <td class="badukpancan ajik cancolor b_r" data-locC="1" data-locR="T"></td>
             </tr>
           </table>
         </td>
@@ -600,6 +617,19 @@
       </tr>
     </table>
     <script>
+      function jung(arr, jungCheckArr){
+        var ddongnemsae = false;
+        arr.forEach((e) => {
+          console.log("포 이치 쵁")
+          console.log("중복 쵁", e, jungCheckArr)
+          if(e[0] == jungCheckArr[0] && e[1] == jungCheckArr[1]){
+            console.log("중복 쵁", e, jungCheckArr)
+            ddongnemsae = true;
+          }
+        });
+        return ddongnemsae
+      }
+
       var cancolor = document.querySelectorAll("td.cancolor");
       var trun = document.getElementById("trun");
 
@@ -617,43 +647,32 @@
       var ddong = document.getElementById("ddong");
 
       ddong.onclick = function(){
-        if(ddong.disabled){
-          if(jungBukCheck.includes(jungCheckList)){
-            alert("Tip: 이미 놓은 돌이 있는 칸에는 놓을 수 없다.");
-            ddong.disabled = true;
-          } else{
-            ddong.disabled = false;
-          }
-        } else{
-          if(jungBukCheck.includes(jungCheckList)){
-            alert("Tip: 이미 놓은 돌이 있는 칸에는 놓을 수 없다.");
-            ddong.disabled = true;
-          } else{
-            ddong.disabled = false;
-          }
+        jungBukCheck.push(jungCheckList)
 
-          jungBukCheck.push(jungCheckList)
+        if(turn_name == 0){
+          b_d_s++;
+          turn_name = 1;
 
-          if(turn_name == 0){
-            b_d_s++;
-            turn_name = 1;
+          hj.innerText = b_d_s;
+          wj.innerText = w_d_s;
 
-            hj.innerText = b_d_s;
-            wj.innerText = w_d_s;
-            
-            trun.innerText = "백";
-          } else if(turn_name == 1){
-            w_d_s++;
-            turn_name = 0;
+          document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.add("blackdol");
+          
+          trun.innerText = "백";
+        } else if(turn_name == 1){
+          w_d_s++;
+          turn_name = 0;
 
-            hj.innerText = b_d_s;
-            wj.innerText = w_d_s;
+          hj.innerText = b_d_s;
+          wj.innerText = w_d_s;
 
-            trun.innerText = "흑";
-          }
-          ddong.disabled = true;
+          document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.add("whitedol");
+
+          trun.innerText = "흑";
         }
+        ddong.disabled = true;
       }
+
       var jungCheckList
       cancolor.forEach(e => {
         e.onclick = function(){
@@ -661,14 +680,18 @@
           var locR = String(e.dataset.locr);
           
           jungCheckList = [locC, locR]
+          console.log(e, e.style.backgroundImage)
+
+          e.style.backgroundImage = String(e.style.backgroundImage) + ", " + "url(./img/target.png)";
           
-          e.style.backgroundImage = e.style.backgroundImage + ", " + "url('./img/target.png')";
-          
-          if(jungBukCheck.includes(jungCheckList)){
+          if(jung(jungBukCheck, jungCheckList)){
             ddong.disabled = true;
-            return;
-          } else{
+            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
+          } else if(!jung(jungBukCheck, jungCheckList)){
             ddong.disabled = false;
+            console.log(jung(jungBukCheck, jungCheckList), ddong.disabled);
+          } else{
+            console.log("예외")
           }
           var locC = String(e.dataset.locc);
           var locR = String(e.dataset.locr);
