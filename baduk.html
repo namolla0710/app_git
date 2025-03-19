@@ -14,7 +14,7 @@
         background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("./img/black.png");
       }
-      
+
       .target:not(.top, .left, .bottom, .right, .t_r, .t_l, .b_r, .b_l){
         background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
         background-image: url("img/target.png");
@@ -648,8 +648,8 @@
         </td>
         <td>
           <div id="log">
-            <button>
-              바둑판 초기화 하기
+            <button id="reset">
+              점수 말고 바둑판만 초기화 하기
             </button>
             <br><br><br><br><br><br><br>
             <button id="ddong" disabled>
@@ -766,7 +766,24 @@
         
         }
       });
-
+      var reset = document.getElementById("reset");
+      
+      reset.onclick = function(){
+        var ok = prompt("정말로 초기화 하시겠습니까?\n\n점수는 초기화 되지 않고 바둑판만 초기화 되며,\n초기화한 바둑판은 다시는 되돌릴 수 없습니다.\n\n\n만약 초기화를 진행 하실 거라면 하단 입력칸에 \n\"초기화\"라고 입력한 후 \"확인\" 버튼을 눌러주세요.")
+        if(ok == "초기화"){
+          cancolor.forEach((elem) => {
+              elem.classList.remove("target");
+              elem.classList.add("ajik");
+              elem.classList.remove("white");
+              elem.classList.remove("black");
+          })
+          alert("초기화가 완료 되었습니다.")
+        } else if(ok == "김민찬 천재"){
+          alert("감사. 님도 천재인 듯 ㅎㅎ.")
+        } else {
+          alert("초기화가 비활성화 되었습니다.")
+        }
+      }
     </script>
   </body>
 </html>
