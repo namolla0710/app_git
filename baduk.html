@@ -791,6 +791,17 @@
               elem.classList.remove("white");
               elem.classList.remove("black");
           })
+          jungBukCheck = [];
+          ddong.disabled = true;
+          
+          turn_name = 0;
+          b_d_s = 0;  // 블랙(b)이 돌(d) 놓은 수(s)
+          w_d_s = 0;  // 화이트(w)이 돌(d) 놓은 수(s)
+
+          hj.innerText = b_d_s;
+          wj.innerText = w_d_s;
+
+
           alert("초기화가 완료 되었습니다.")
         } else if(ok == "김민찬 천재"){
           alert("감사. 님도 천재인 듯 ㅎㅎ.")
