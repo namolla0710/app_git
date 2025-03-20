@@ -814,6 +814,13 @@
           alert("초기화가 비활성화 되었습니다.")
         }
       }
+      window.addEventListener("beforeunload", (event) => {
+        event.returnValue = true;
+      });
+      
+      window.onbeforeunload = () => {
+        return true;
+      };
     </script>
   </body>
 </html>
