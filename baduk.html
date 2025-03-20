@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>바둑판</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
     <style>
       body {
         -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
         user-select:none
+      }
+      .draggable {
+        -webkit-user-select:all;
+        -moz-user-select:all;
+        -ms-user-select:all;
+        user-select:all
       }
       .whitedol {
         background-size: 3.5vh 3.5vh, 3.5vh 3.5vh, 3.5vh, 3.5vh;
@@ -664,7 +671,13 @@
             <button id="reset" style="background-color: red; border-radius:2.5vh; height: 5vh:">
               점수 말고 바둑판만 초기화 하기
             </button>
-            <br><br><br><br>
+            <br><br>
+            <div>
+              <button id="generateButton">현재 상황 공유 QR 생성</button>
+              <button id="downloadButton">현재 상황 공유 QR 다운로드</button>
+              <div id="qrcode" class="mb-4"></div>
+            </div>
+
             <button id="ddong" style="height: 20vh; background-color: #d7a870; font-size: 5vh; border-radius: 10vh; width: calc(80vw - (3.5vh * 20));" disabled>
               <span id="nowLoc"></span> 자리에 돌을 놓기
             </button>
@@ -827,6 +840,32 @@
       window.onbeforeunload = () => {
         return true;
       };
+
+      const qrcodeContainer = document.getElementById('qrcode');
+      const downloadButton = document.getElementById('downloadButton');
+
+      generateButton.addEventListener('click', () => {
+            qrcodeContainer.innerHTML = ''; // Clear previous QR code
+            QRCode.toCanvas(qrInput.value, { width: 256 }, function (error, canvas) {
+                if (error) console.error(error);
+                qrcodeContainer.appendChild(canvas);
+            });
+        });
+
+        downloadButton.addEventListener('click', () => {
+            const canvas = qrcodeContainer.querySelector('canvas');
+            if (canvas) {
+                const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                const link = document.createElement('a');
+                link.download = 'qrcode.png';
+                link.href = image;
+                link.click();
+            }
+        });
+
+        // Generate initial QR code
+        generateButton.click();
+      
     </script>
   </body>
 </html>
