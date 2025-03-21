@@ -744,8 +744,8 @@
           
           document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.add("blackdol");
           document.querySelector(`td[data-locc = "${jungCheckList[0]}"][data-locr = "${jungCheckList[1]}"]`).classList.remove("ajik");
-  
-          {"color": 0(흑) || 1(백), "Locc": locc, "Locr": locr}        
+
+          
           
           trun.innerText = "백";
         } else if(turn_name == 1){
@@ -811,7 +811,7 @@
       var reset = document.getElementById("reset");
       /*
         돌데이터 형식: 
-        {"color": 0(흑) || 1(백), "Locc": locc, "Locr": locr}
+        {"color": 0(흑) || 1(백), "locc": locc, "locr": locr}
       */
       var beIncodeData = {
         "giData": {
@@ -918,7 +918,7 @@
               eles.classList.remove("black");
           })
           dicode_data["giData"]
-          trun.innerText = (dicode_data["giData"]["trun"] == 1) ? 백 : 흑;
+          trun.innerText = (dicode_data["giData"]["trun"] == 1) ? "백" : "흑";
 
           var b_s = document.getElementById("bs");
           var w_s = document.getElementById("ws");
@@ -939,6 +939,16 @@
           
           hj.innerText = b_d_s;
           wj.innerText = w_d_s;
+
+
+          dicode_data["dolData"].forEach((dol) => {
+            var dol_color = dol["color"];
+            var dol_locc = dol["locc"];
+            var dol_locr = dol["locr"];
+
+            document.querySelector(`td[data-locc = "${dol_locc}"][data-locr = "${{dol_locr}}"]`).classList.add(`${(dol["color"] == 1) ? "white" : "black"}dol`;
+            document.querySelector(`td[data-locc = "${dol_locc}"][data-locr = "${{dol_locr}"]`).classList.remove("ajik");
+          })
           
         }  
       }
