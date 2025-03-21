@@ -844,9 +844,11 @@
       const qrcodeContainer = document.getElementById('qrcode');
       const downloadButton = document.getElementById('downloadButton');
 
+      var url;
+      
       generateButton.addEventListener('click', () => {
             qrcodeContainer.innerHTML = ''; // Clear previous QR code
-            QRCode.toCanvas(qrInput.value, { width: 256 }, function (error, canvas) {
+            QRCode.toCanvas(url, { width: 256 }, function (error, canvas) {
                 if (error) console.error(error);
                 qrcodeContainer.appendChild(canvas);
             });
@@ -863,8 +865,22 @@
             }
         });
 
-        // Generate initial QR code
-        generateButton.click();
+      const url = new URL(window.location.href);
+      
+      // URLSearchParams 객체
+      const urlParams = url.searchParams;
+
+      /*
+      
+      */
+      
+      window.onload = function(){
+      
+        if(urlParams.has('data')){
+          url = urlParams.get('data');
+          
+        }  
+      }
       
     </script>
   </body>
