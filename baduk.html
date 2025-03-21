@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>바둑판</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
     <style>
       body {
@@ -919,16 +918,25 @@
               eles.classList.remove("black");
           })
           dicode_data["giData"]
-          trun.innerTEXT = (dicode_data["giData"]["trun"] == 1) ? 백 : 흑;
+          trun.innerText = (dicode_data["giData"]["trun"] == 1) ? 백 : 흑;
+
+          var b_s = document.getElementById("bs");
+          var w_s = document.getElementById("ws");
+          
+          trun.innerText = dicode_data["giData"]["trun"];
+          trun.innerText = dicode_data["giData"]["trun"];
 
           nowLoc = document.getElementById("nowLoc");
           hj = document.getElementById("hj");
           wj = document.getElementById("wj");
 
-          turn_name = 0;
-          b_d_s = 0;  // 블랙(b)이 돌(d) 놓은 수(s)
-          w_d_s = 0;  // 화이트(w)이 돌(d) 놓은 수(s)
+          turn_name = dicode_data["giData"]["trun"];
+          b_d_s = dicode_data["giData"]["blackDol"];  // 블랙(b)이 돌(d) 놓은 수(s)
+          w_d_s = dicode_data["giData"]["whiteDol"];  // 화이트(w)이 돌(d) 놓은 수(s)
 
+          b_s.value = dicode_data["giData"]["blackScore"];
+          w_s.value = dicode_data["giData"]["whiteScore"];
+          
           hj.innerText = b_d_s;
           wj.innerText = w_d_s;
           
