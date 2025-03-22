@@ -704,7 +704,7 @@
       <td>
         <div id="log">
           <h2>
-            baduk 1.2.0
+            baduk 1.2.1
           </h2>
           <button id="reset" style="background-color: red; border-radius:2.5vh; height: 5vh;">
             점수 말고 바둑판만 초기화 하기
@@ -912,13 +912,10 @@
         hj.innerText = b_d_s;
         wj.innerText = w_d_s;
 
+        window.location.href = window.location.origin + window.location.pathname;
 
         alert("초기화가 완료 되었습니다.")
-      } else if (ok == "김민찬 천재") {
-        alert("감사. 님도 천재인 듯 ㅎㅎ.")
-      } else if (ok == "김민찬 바보") {
-        alert("응 어쩔 안물 안궁. 니가 더 바보임. 아 아니다 님은 바보멍청이똥개해삼말미잘오징어꼴뚜기대구명태쓰레기망둥어임.")
-      } else {
+      }  else {
         alert("초기화가 비활성화 되었습니다.")
       }
     }
