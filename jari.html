@@ -89,7 +89,7 @@
   <body>
     <div>
       <div id="gi">
-        <button id="namesh">이름 목록 섞기(시작 전 자동으로 한번 섞기 때문에 필수는 아님)</button>
+        <button id="namesh">이름 목록 섞기(시작 전 자동으로 한번 섞기 때문에 필수는 아님)<span style="font-size: 2.5vh;">10번 이상 클릭하는 걸 강력 추천</span></button>
         <button id="bbobsh">순서 목록 섞기(시작 전 자동으로 한번 섞기 때문에 필수는 아님)</button>
         <label for="next">다음 사람 예고: <input type="checkbox" id="next"></label>
         <br>
@@ -97,6 +97,7 @@
         <span id="da2" class="das"></span>
         <span id="da3" class="das"></span>
         <span id="da4" class="das"></span>
+        <a href="./IsRandom.html">소스코드 및 사용한 랜덤 알고리즘 보러가기</a>
       </div>
       <table>
         <tr>
@@ -137,6 +138,10 @@
         </tr>
       </table>
     </div>
+    <h1>
+      Copyright 2025. 김민찬 All rights reserved. <br>
+      사용 폰트: 네이버 - 나눔스퀘어라운드
+    </h1>
     <script>
       const names = [
         "김민찬", "김소영", "김예나", "김예인", "김유진", "김하진",
@@ -168,10 +173,12 @@
         document.getElementById("bbobsh").disabled = true;
         document.getElementById(bbob[nowJa]).innerText = names[nowJin];
         document.getElementById(bbob[nowJa]).classList.add("me");
-        da1.innerText = (names[nowJin + 1] != undefined) ? names[nowJin + 1] : "없음";
-        da2.innerText = (names[nowJin + 2] != undefined) ? names[nowJin + 2] : "없음";
-        da3.innerText = (names[nowJin + 3] != undefined) ? names[nowJin + 3] : "없음";
-        da4.innerText = (names[nowJin + 4] != undefined) ? names[nowJin + 4] : "없음";
+        if(IsNext == true){
+          da1.innerText = (names[nowJin + 1] != undefined) ? names[nowJin + 1] : "없음";
+          da2.innerText = (names[nowJin + 2] != undefined) ? names[nowJin + 2] : "없음";
+          da3.innerText = (names[nowJin + 3] != undefined) ? names[nowJin + 3] : "없음";
+          da4.innerText = (names[nowJin + 4] != undefined) ? names[nowJin + 4] : "없음";
+        }
         nowJin++;
         nowJa++;
         
@@ -200,6 +207,9 @@
         } else{
           IsNext = false;
           da1.innerText = "먼저 다음 사람 예고를 켜주세요";
+          da2.innerText = "";
+          da3.innerText = "";
+          da4.innerText = "";
         }
       }
       </script>
