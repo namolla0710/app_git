@@ -89,8 +89,8 @@
   <body>
     <div>
       <div id="gi">
-        <button id="namesh">이름 목록 섞기(시작 전 자동으로 한번 섞기 때문에 필수는 아님)<span style="font-size: 2.5vh;">10번 이상 클릭하는 걸 강력 추천</span></button>
-        <button id="bbobsh">순서 목록 섞기(시작 전 자동으로 한번 섞기 때문에 필수는 아님)</button>
+        <button id="namesh">이름 목록 섞기(시작 전 자동으로 50 ~ 200(랜덤)번 섞기 때문에 필수는 아님)</button>
+        <button id="bbobsh">순서 목록 섞기(시작 전 자동으로 50 ~ 200(랜덤)번 섞기 때문에 필수는 아님)</button>
         <label for="next">다음 사람 예고: <input type="checkbox" id="next"></label>
         <br>
         <span id="da1" class="das">먼저 다음 사람 예고를 켜주세요</span>
@@ -158,8 +158,15 @@
           [array[i], array[j]] = [array[j], array[i]];
         }
       }
-      shuffle(names);
-      shuffle(bbob);
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      for(var ban = 0; ban < rand(50, 200); ban++){
+        shuffle(names);
+      }
+      for(var ban = 0; ban < rand(50, 200); ban++){
+        shuffle(bbob);
+      }
 
       var da1 = document.getElementById("da1");
       var da2 = document.getElementById("da2");
