@@ -166,7 +166,7 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
       
-      for(var ban = 0; ban < rand(10000, 50000); ban++){
+      for(var ban = 0; ban < rand(50, 50000); ban++){
         shuffle(bbob);
       }
 
@@ -182,6 +182,12 @@
         document.getElementById("bbobsh").disabled = true;
         document.getElementById(bbob[nowJa]).innerText = names[nowJin];
         document.getElementById(bbob[nowJa]).classList.add("me");
+        if(nowJin = 0){
+          if(document.documentElement.requestFullscreen)
+            document.querySelector("table").requestFullscreen();
+          else if(document.documentElement.webkitRequestFullScreen)
+            document.querySelector("table").webkitRequestFullScreen();
+        }
         // if(IsNext == true){
         //   da1.innerText = (names[nowJin + 1] != undefined) ? names[nowJin + 1] : "없음";
         //   da2.innerText = (names[nowJin + 2] != undefined) ? names[nowJin + 2] : "없음";
