@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우유 당번 선택기</title>
+  <style>
+    @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+    * {
+      font-family: "nanumsquare";
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f3faff;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    select {
+      font-size: 1.2em;
+      margin: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #0077cc;
+
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+    textarea {
+      width: 300px;
+      height: 80px;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button {
+      width: 10em;
+      height: 4em;
+
+
+      background-color: #0077cc;
+      color: #f3faff;
+
+      border: none;
+      border-radius: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>우유 당번 선택</h1>
+
+  <label>1번 당번: </label>
+  <select id="duty1">
+    <option disabled selected>선택</option>
+  </select><br>
+
+  <label>2번 당번: </label>
+  <select id="duty2">
+    <option disabled selected>선택</option>
+  </select><br>
+
+  <button onclick="saveDuty()">당번 저장</button>
+
+  <div id="result">당번을 선택하고 저장하세요.</div>
+
+  <h2>명단 입력</h2>
+  <p>쉼표로 이름을 입력하세요 (예: 김영희, 박철수, 홍길동)<br>(기본값은 24명 전체 입니다.)</p>
+  <textarea id="nameInput" placeholder="예: 김영희, 박철수, 홍길동"></textarea><br>
+  <button onclick="saveNames()">명단 저장</button>
+
+  <script>
+    const STORAGE_NAMES = "milk_duty_names_v4";
+    const STORAGE_DUTY1 = "milk_duty_1";
+    const STORAGE_DUTY2 = "milk_duty_2";
+    const STORAGE_DATE = "milk_duty_date";
+
+    function getTodayDateStr() {
+      const today = new Date();
+      return today.toISOString().split("T")[0]; // YYYY-MM-DD
+    }
+
+    function loadNames() {
+      const saved = localStorage.getItem(STORAGE_NAMES);
+      return saved ? saved.split(",").map(n => n.trim()).filter(Boolean) : [
+        "김민찬",
+        "김소영",
+        "김예나",
+        "김예인",
+        "김유진",
+        "김하진",
+        "문승민",
+        "민채아",
+        "변가연",
+        "변승규",
+        "서지아",
+        "양혜주",
+        "우승기",
+        "이도윤",
+        "이용우",
+        "이재아",
+        "이한별",
+        "이현",
+        "이현령",
+        "장의찬",
+        "장준혁",
+        "최재인",
+        "최해율",
+        "홍지우"
+      ];
+    }
+
+    function populateSelectBoxes() {
+      const names = loadNames();
+      const select1 = document.getElementById("duty1");
+      const select2 = document.getElementById("duty2");
+
+      select1.innerHTML = '<option disabled>선택</option>';
+      select2.innerHTML = '<option disabled>선택</option>';
+
+      names.forEach(name => {
+        const option1 = document.createElement("option");
+        option1.value = name;
+        option1.textContent = name;
+        const option2 = option1.cloneNode(true);
+        select1.appendChild(option1);
+        select2.appendChild(option2);
+      });
+
+      const saved1 = localStorage.getItem(STORAGE_DUTY1);
+      const saved2 = localStorage.getItem(STORAGE_DUTY2);
+      if (saved1) select1.value = saved1;
+      if (saved2) select2.value = saved2;
+
+      displayDuty();
+    }
+
+    function saveDuty() {
+      const d1 = document.getElementById("duty1").value;
+      const d2 = document.getElementById("duty2").value;
+
+      if (!d1 || !d2 || d1 === d2) {
+        document.getElementById("result").textContent = "⚠️ 서로 다른 두 명을 선택하세요!";
+        return;
+      }
+
+      localStorage.setItem(STORAGE_DUTY1, d1);
+      localStorage.setItem(STORAGE_DUTY2, d2);
+      localStorage.setItem(STORAGE_DATE, getTodayDateStr());
+
+      displayDuty();
+    }
+
+    function displayDuty() {
+      const d1 = localStorage.getItem(STORAGE_DUTY1);
+      const d2 = localStorage.getItem(STORAGE_DUTY2);
+      const savedDate = localStorage.getItem(STORAGE_DATE);
+      const today = getTodayDateStr();
+
+      if (!d1 || !d2) {
+        document.getElementById("result").textContent = "당번을 선택하고 저장하세요.";
+        return;
+      }
+
+      if (savedDate === today) {
+        document.getElementById("result").innerHTML = `<div style="width: 1em; height: 1em; border-radius: 0.5em; background-color: #DDDDE0; margin-right: 2em;"></div> 내일 🥛 당번은 "${d1}", "${d2}" 입니다!`;
+      } else {
+        document.getElementById("result").innerHTML = `<div style="width: 1em; height: 1em; border-radius: 0.5em; background-color: yellowgreen; margin-right: 2em;"></div> 오늘 🥛 당번은 "${d1}", "${d2}" 입니다!`;
+      }
+    }
+
+    function saveNames() {
+      const input = document.getElementById("nameInput").value;
+      if (!input.trim()) {
+        alert("이름을 입력하세요!");
+        return;
+      }
+      localStorage.setItem(STORAGE_NAMES, input);
+      populateSelectBoxes();
+      document.getElementById("result").textContent = "명단이 저장되었습니다. 당번을 다시 선택하세요.";
+    }
+
+    // 초기화
+    populateSelectBoxes();
+  </script>
+
+</body>
+</html>

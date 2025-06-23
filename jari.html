@@ -108,37 +108,37 @@
           <td colspan="2" class="noja tea">선생님</td>
           <td colspan="4" class="noja chil">칠판</td>          
         </tr>
-        <tr>
-          <td class="jari" id="1"></td>
-          <td class="jari" id="2"></td>
-          <td class="jari" id="3"></td>
-          <td class="jari" id="4"></td>
-          <td class="jari" id="5"></td>
-          <td class="jari" id="6"></td>
+                <tr>
+          <td class="jari" id="1" data-gn=0 data-sn=0></td>
+          <td class="jari" id="2" data-gn=0 data-sn=1></td>
+          <td class="jari" id="3" data-gn=0 data-sn=2></td>
+          <td class="jari" id="4" data-gn=0 data-sn=3></td>
+          <td class="jari" id="5" data-gn=0 data-sn=4></td>
+          <td class="jari" id="6" data-gn=0 data-sn=5></td>
         </tr>
         <tr>
-          <td class="jari" id="7"></td>
-          <td class="jari" id="8"></td>
-          <td class="jari" id="9"></td>
-          <td class="jari" id="10"></td>
-          <td class="jari" id="11"></td>
-          <td class="jari" id="12"></td>
+          <td class="jari" id="7" data-gn=1 data-sn=0></td>
+          <td class="jari" id="8" data-gn=1 data-sn=1></td>
+          <td class="jari" id="9" data-gn=1 data-sn=2></td>
+          <td class="jari" id="10" data-gn=1 data-sn=3></td>
+          <td class="jari" id="11" data-gn=1 data-sn=4></td>
+          <td class="jari" id="12" data-gn=1 data-sn=5></td>
         </tr>
         <tr>
-          <td class="jari" id="13"></td>
-          <td class="jari" id="14"></td>
-          <td class="jari" id="15"></td>
-          <td class="jari" id="16"></td>
-          <td class="jari" id="17"></td>
-          <td class="jari" id="18"></td>
+          <td class="jari" id="13" data-gn=2 data-sn=0></td>
+          <td class="jari" id="14" data-gn=2 data-sn=1></td>
+          <td class="jari" id="15" data-gn=2 data-sn=2></td>
+          <td class="jari" id="16" data-gn=2 data-sn=3></td>
+          <td class="jari" id="17" data-gn=2 data-sn=4></td>
+          <td class="jari" id="18" data-gn=2 data-sn=5></td>
         </tr>
         <tr>
-          <td class="jari" id="19"></td>
-          <td class="jari" id="20"></td>
-          <td class="jari" id="21"></td>
-          <td class="jari" id="22"></td>
-          <td class="jari" id="23"></td>
-          <td class="jari" id="24"></td>
+          <td class="jari" id="19" data-gn=3 data-sn=0></td>
+          <td class="jari" id="20" data-gn=3 data-sn=1></td>
+          <td class="jari" id="21" data-gn=3 data-sn=2></td>
+          <td class="jari" id="22" data-gn=3 data-sn=3></td>
+          <td class="jari" id="23" data-gn=3 data-sn=4></td>
+          <td class="jari" id="24" data-gn=3 data-sn=5></td>
         </tr>
       </table>
     </div>
@@ -156,6 +156,14 @@
       const bbob = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24
       ]
+      
+      var jaData = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+      ]
+
       function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
           let j = Math.floor(Math.random() * (i + 1));
@@ -180,17 +188,12 @@
       function drawJari(){
         document.getElementById("namesh").disabled = true;
         document.getElementById("bbobsh").disabled = true;
+
         document.getElementById(bbob[nowJa]).innerText = names[nowJin];
         document.getElementById(bbob[nowJa]).classList.add("me");
-        // if(IsNext == true){
-        //   da1.innerText = (names[nowJin + 1] != undefined) ? names[nowJin + 1] : "없음";
-        //   da2.innerText = (names[nowJin + 2] != undefined) ? names[nowJin + 2] : "없음";
-        //   da3.innerText = (names[nowJin + 3] != undefined) ? names[nowJin + 3] : "없음";
-        //   da4.innerText = (names[nowJin + 4] != undefined) ? names[nowJin + 4] : "없음";
-        // }
+        
         nowJin++;
         nowJa++;
-        
       }
 
       window.onkeydown = (e) => {
