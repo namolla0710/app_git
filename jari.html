@@ -94,13 +94,23 @@
 
         background-color: #F2AE1D;
       }
+      table:fullscreen {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+      }
+      table:-webkit-full-screen {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+      }
     </style>
   </head>
   <body>
     <div>
       <div id="gi">
-        <button id="namesh">이름 목록 섞기(시작 전 자동으로 50 ~ 200(랜덤)번 섞기 때문에 필수는 아님)</button>
-        <button id="bbobsh">순서 목록 섞기</button>
+        <button id="namesh">이름 목록 섞기</button>
+        <button id="bbobsh">순서 목록 섞기(시작 전 자동으로 50 ~ 50000(랜덤)번 섞기 때문에 필수는 아님)</button>
         <a href="./IsRandom.html">소스코드 및 사용한 랜덤 알고리즘 보러가기</a>
       </div>
       <table>
@@ -174,7 +184,7 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
       
-      for(var ban = 0; ban < rand(50, 200); ban++){
+      for(var ban = 0; ban < rand(50, 50000); ban++){
         shuffle(bbob);
       }
 
@@ -191,7 +201,12 @@
 
         document.getElementById(bbob[nowJa]).innerText = names[nowJin];
         document.getElementById(bbob[nowJa]).classList.add("me");
-        
+        if(nowJin == 0){
+          if(document.documentElement.requestFullscreen)
+            document.querySelector("table").requestFullscreen();
+          else if(document.documentElement.webkitRequestFullScreen)
+            document.querySelector("table").webkitRequestFullScreen();
+        }
         nowJin++;
         nowJa++;
       }
@@ -207,23 +222,6 @@
       document.getElementById("bbobsh").onclick = () => {
         shuffle(bbob);
       }
-      // var IsNext = false;
-      // document.getElementById("next").onchange = () => {
-      //   if(document.getElementById("next").checked){
-      //     IsNext = true;
-
-      //     da1.innerText = (names[nowJin] != undefined) ? names[nowJin] : "없음";
-      //     da2.innerText = (names[nowJin + 1] != undefined) ? names[nowJin + 1] : "없음";
-      //     da3.innerText = (names[nowJin + 2] != undefined) ? names[nowJin + 2] : "없음";
-      //     da4.innerText = (names[nowJin + 3] != undefined) ? names[nowJin + 3] : "없음";
-      //   } else{
-      //     IsNext = false;
-      //     da1.innerText = "먼저 다음 사람 예고를 켜주세요";
-      //     da2.innerText = "";
-      //     da3.innerText = "";
-      //     da4.innerText = "";
-      //   }
-      // }
       </script>
   </body>
 </html>
