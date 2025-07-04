@@ -110,7 +110,7 @@
     <div>
       <div id="gi">
         <button id="namesh">이름 목록 섞기</button>
-        <button id="namesh" oncilck="names.reverse()">뽑기 순서 반대로하기</button>
+        <button id="namere">뽑기 순서 반대로하기</button>
         <button id="bbobsh">순서 목록 섞기(시작 전 자동으로 50 ~ 50000(랜덤)번 섞기 때문에 필수는 아님)</button>
         <a href="./IsRandom.html">소스코드 및 사용한 랜덤 알고리즘 보러가기</a>
       </div>
@@ -119,7 +119,7 @@
           <td colspan="2" class="noja tea">선생님</td>
           <td colspan="4" class="noja chil">칠판</td>          
         </tr>
-                <tr>
+        <tr>
           <td class="jari" id="1" data-gn=0 data-sn=0></td>
           <td class="jari" id="2" data-gn=0 data-sn=1></td>
           <td class="jari" id="3" data-gn=0 data-sn=2></td>
@@ -217,6 +217,9 @@
       }
       document.getElementById("namesh").onclick = () => {
         shuffle(names);
+      }
+      document.getElementById("namere").onclick = () => {
+        names.reverse()
       }
       document.getElementById("bbobsh").onclick = () => {
         shuffle(bbob);
