@@ -205,6 +205,7 @@
 
       var nowJin = 0;
       var nowJa = 0;
+      const audio = new Audio('뿡.mp3'); // `audio.mp3` 파일을 로딩
       function drawJari(){
         document.getElementById("namesh").disabled = true;
         document.getElementById("bbobsh").disabled = true;
@@ -216,6 +217,10 @@
             document.querySelector("table").requestFullscreen();
           else if(document.documentElement.webkitRequestFullScreen)
             document.querySelector("table").webkitRequestFullScreen();
+        }
+        if(names[nowJin] == "변승규"){
+          
+          audio.play(); // 오디오 재생
         }
         nowJin++;
         nowJa++;
